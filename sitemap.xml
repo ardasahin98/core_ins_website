@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Replace www.yourdomain.com throughout when the domain is live. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.yourdomain.com/</loc></url>
+  <url><loc>https://www.yourdomain.com/sectors</loc></url>
+  <url><loc>https://www.yourdomain.com/instruments</loc></url>
+  <url><loc>https://www.yourdomain.com/services</loc></url>
+  <url><loc>https://www.yourdomain.com/platform</loc></url>
+  <url><loc>https://www.yourdomain.com/about</loc></url>
+  <url><loc>https://www.yourdomain.com/projects</loc></url>
+  <url><loc>https://www.yourdomain.com/contact</loc></url>
+  <url><loc>https://www.yourdomain.com/sector?s=dams</loc></url>
+  <url><loc>https://www.yourdomain.com/sector?s=tailings</loc></url>
+  <url><loc>https://www.yourdomain.com/sector?s=tunnels</loc></url>
+  <url><loc>https://www.yourdomain.com/sector?s=excavations</loc></url>
+  <url><loc>https://www.yourdomain.com/sector?s=bridges</loc></url>
+  <url><loc>https://www.yourdomain.com/sector?s=slopes</loc></url>
+  <url><loc>https://www.yourdomain.com/project?p=andean-tailings-raise</loc></url>
+  <url><loc>https://www.yourdomain.com/project?p=metro-line-settlement</loc></url>
+  <url><loc>https://www.yourdomain.com/project?p=embankment-dam-safety</loc></url>
+  <url><loc>https://www.yourdomain.com/project?p=deep-basement-excavation</loc></url>
+  <url><loc>https://www.yourdomain.com/project?p=highway-slope-warning</loc></url>
+  <url><loc>https://www.yourdomain.com/project?p=rail-viaduct-shm</loc></url>
+  <url><loc>https://www.yourdomain.com/instrument?i=vw-piezometer</loc></url>
+  <url><loc>https://www.yourdomain.com/instrument?i=in-place-inclinometer</loc></url>
+  <url><loc>https://www.yourdomain.com/instrument?i=inclinometer-system</loc></url>
+  <url><loc>https://www.yourdomain.com/instrument?i=extensometer</loc></url>
+  <url><loc>https://www.yourdomain.com/instrument?i=tiltmeter</loc></url>
+  <url><loc>https://www.yourdomain.com/instrument?i=load-cell</loc></url>
+  <url><loc>https://www.yourdomain.com/instrument?i=strain-gauge</loc></url>
+  <url><loc>https://www.yourdomain.com/instrument?i=automated-total-station</loc></url>
+  <url><loc>https://www.yourdomain.com/instrument?i=gnss-monitoring</loc></url>
+  <url><loc>https://www.yourdomain.com/instrument?i=accelerometer</loc></url>
+  <url><loc>https://www.yourdomain.com/instrument?i=vw-datalogger</loc></url>
+  <url><loc>https://www.yourdomain.com/instrument?i=settlement-system</loc></url>
+</urlset>

@@ -1,0 +1,10 @@
+# While the site is still full of placeholder text, keep it out of search.
+# When you are ready to be found, delete the two Disallow lines below and
+# uncomment the Sitemap line (with your real domain).
+
+User-agent: *
+Disallow: /
+
+# User-agent: *
+# Allow: /
+# Sitemap: https://www.yourdomain.com/sitemap.xml

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="512" height="512" role="img" aria-label="CORE Instrumentation and Monitoring"><defs>
+  <linearGradient id="ai_gSlate" x1="0.15" y1="0" x2="0.9" y2="1">
+    <stop offset="0" stop-color="#6B8695"/><stop offset="1" stop-color="#22333C"/></linearGradient>
+  <linearGradient id="ai_gMantle" x1="0.15" y1="0" x2="0.9" y2="1">
+    <stop offset="0" stop-color="#C4762A"/><stop offset="1" stop-color="#8A4412"/></linearGradient>
+  <linearGradient id="ai_gEmber" x1="0.15" y1="0" x2="0.9" y2="1">
+    <stop offset="0" stop-color="#F79A38"/><stop offset="1" stop-color="#D25A10"/></linearGradient>
+  <radialGradient id="ai_gCore" cx="38%" cy="32%" r="76%">
+    <stop offset="0" stop-color="#FFF3C4"/><stop offset="0.5" stop-color="#FFDD80"/>
+    <stop offset="1" stop-color="#F5A21E"/></radialGradient>
+</defs><defs><linearGradient id="ai_bg" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#1E323C"/><stop offset="1" stop-color="#0E1A21"/></linearGradient></defs><rect width="200" height="200" rx="44" fill="url(#ai_bg)"/><g transform="translate(100 100) scale(0.80) translate(-100 -100)"><defs>
+  <linearGradient id="ai_gSlate" x1="0.15" y1="0" x2="0.9" y2="1">
+    <stop offset="0" stop-color="#6B8695"/><stop offset="1" stop-color="#22333C"/></linearGradient>
+  <linearGradient id="ai_gMantle" x1="0.15" y1="0" x2="0.9" y2="1">
+    <stop offset="0" stop-color="#C4762A"/><stop offset="1" stop-color="#8A4412"/></linearGradient>
+  <linearGradient id="ai_gEmber" x1="0.15" y1="0" x2="0.9" y2="1">
+    <stop offset="0" stop-color="#F79A38"/><stop offset="1" stop-color="#D25A10"/></linearGradient>
+  <radialGradient id="ai_gCore" cx="38%" cy="32%" r="76%">
+    <stop offset="0" stop-color="#FFF3C4"/><stop offset="0.5" stop-color="#FFDD80"/>
+    <stop offset="1" stop-color="#F5A21E"/></radialGradient>
+</defs><path d="M 172.746 58.000 A 84.000 84.000 0 1 0 172.746 142.000" fill="none" stroke="url(#ai_gSlate)" stroke-width="22" stroke-linecap="butt"/><path d="M 145.597 69.244 A 55.000 55.000 0 1 0 145.597 130.756" fill="none" stroke="url(#ai_gMantle)" stroke-width="20" stroke-linecap="butt"/><path d="M 123.640 81.530 A 30.000 30.000 0 1 0 123.640 118.470" fill="none" stroke="url(#ai_gEmber)" stroke-width="16" stroke-linecap="butt"/><circle cx="100" cy="100" r="11" fill="url(#ai_gCore)"/></g></svg>

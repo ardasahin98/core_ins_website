@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Monitoring platform &middot; CORE Instrumentation &amp; Monitoring</title>
+<meta name="description" content="Every instrument reports into one place: live readings, trigger levels, automatic alarms and scheduled reports.">
+<meta property="og:title" content="Monitoring platform &middot; CORE Instrumentation &amp; Monitoring">
+<meta property="og:description" content="Every instrument reports into one place: live readings, trigger levels, automatic alarms and scheduled reports.">
+<meta property="og:type" content="website">
+<link rel="icon" href="/brand/core-favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/brand/core-favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/brand/core-apple-touch-180.png">
+<meta name="theme-color" content="#16242C">
+<link rel="stylesheet" href="/assets/core.css">
+<script src="/assets/firebase-config.js"></script>
+<script src="/assets/data.js"></script>
+<script src="/assets/firestore.js"></script>
+<script src="/assets/core.js" defer></script>
+</head>
+<body data-page="platform">
+<a class="skip" href="#main">Skip to content</a>
+<div class="notice" id="placeholder-notice" hidden>
+  Showing placeholder content &mdash; Firebase is not connected yet. Fill in
+  <code>assets/firebase-config.js</code>.
+</div>
+<header class="site">
+  <div class="hdr">
+    <a class="brand" href="/"><svg viewBox="0 0 200 200" width="38" height="38" role="img" aria-label="CORE">
+    <defs>
+      <linearGradient id="gS" x1="0.15" y1="0" x2="0.9" y2="1"><stop offset="0" stop-color="#6B8695"/><stop offset="1" stop-color="#22333C"/></linearGradient>
+      <linearGradient id="gM" x1="0.15" y1="0" x2="0.9" y2="1"><stop offset="0" stop-color="#C4762A"/><stop offset="1" stop-color="#8A4412"/></linearGradient>
+      <linearGradient id="gE" x1="0.15" y1="0" x2="0.9" y2="1"><stop offset="0" stop-color="#F79A38"/><stop offset="1" stop-color="#D25A10"/></linearGradient>
+      <radialGradient id="gC" cx="38%" cy="32%" r="76%"><stop offset="0" stop-color="#FFF3C4"/><stop offset="0.5" stop-color="#FFDD80"/><stop offset="1" stop-color="#F5A21E"/></radialGradient>
+    </defs>
+    <path d="M 172.74 58.00 A 84 84 0 1 0 172.74 142.00" fill="none" stroke="url(#gS)" stroke-width="22"/>
+    <path d="M 145.60 69.24 A 55 55 0 1 0 145.60 130.76" fill="none" stroke="url(#gM)" stroke-width="20"/>
+    <path d="M 123.64 81.53 A 30 30 0 1 0 123.64 118.47" fill="none" stroke="url(#gE)" stroke-width="16"/>
+    <circle cx="100" cy="100" r="11" fill="url(#gC)"/>
+  </svg>
+      <span class="txt"><b>CORE</b><small>Instrumentation &amp; Monitoring</small></span>
+    </a>
+    <nav class="main"><a href="/sectors">Sectors</a><a href="/instruments">Instruments</a><a href="/services">Services</a><a href="/platform" aria-current="page">Platform</a><a href="/about">Company</a></nav>
+    <div class="btns">
+      <a class="btn btn-ghost" data-platform target="_blank" rel="noopener">Platform login</a>
+      <a class="btn btn-ember" href="/contact">Request a quote</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-label="Menu">
+        <span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <nav class="mobile"><a href="/sectors">Sectors</a><a href="/instruments">Instruments</a><a href="/services">Services</a><a href="/platform">Platform</a><a href="/about">Company</a><a data-platform target="_blank" rel="noopener"
+    style="color:var(--ember-text);font-weight:500">Platform login &rarr;</a></nav>
+</header>
+<main id="main">
+<section class="banner">
+  <div class="wrap">
+    <p class="crumbs"><a href="/">Home</a><span>/</span>Platform</p>
+    <p class="eb">The platform</p>
+    <h1>The instruments are only half of it</h1>
+    <p class="lead">A sensor that reports into a spreadsheet nobody opens is not monitoring. Everything we install feeds one platform, where the thresholds are already drawn and the alarm reaches a person.</p>
+    <div class="btns" style="margin-top:36px">
+        <a class="btn btn-ember btn-lg" data-platform target="_blank" rel="noopener">Platform login</a>
+        <a class="btn btn-outline-dark btn-lg" href="/contact">Request a demo</a></div>
+      <p style="margin-top:24px;font-size:13px;color:#7C919B">Existing client? Your login is the
+        same one your project team issued.</p>
+  </div>
+</section>
+<section class="pad">
+  <div class="wrap">
+    <div class="head reveal"><div><p class="eb">What it does</p>
+      <h2>Built around the moment a level is crossed</h2>
+      <p>Everything else on a monitoring screen is context for that one event.</p></div></div>
+    <div class="tiles">
+      <div class="reveal"><h3>Live readings</h3><p>Every sensor, current value and trend, on one screen &mdash; including the instruments that were installed years ago.</p></div><div class="reveal"><h3>Trigger levels</h3><p>Alert and action levels drawn on the chart, agreed with you at the start, so a reading is interpreted the moment it arrives.</p></div><div class="reveal"><h3>Automatic alarms</h3><p>SMS and email to the people on the distribution list, with escalation if nobody acknowledges.</p></div><div class="reveal"><h3>Validated data</h3><p>Readings are checked against range, rate of change and sensor health before they become a number you act on.</p></div><div class="reveal"><h3>Reports</h3><p>Scheduled reports in your format &mdash; including the ones the regulator wants, not just the ones we find easy.</p></div><div class="reveal"><h3>Export &amp; API</h3><p>Your data leaves in CSV or through an API whenever you want it. It is your record, not ours.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad white">
+  <div class="wrap">
+    <div class="head reveal"><div><p class="eb">Status levels</p>
+      <h2>Four states, and they always mean the same thing</h2>
+      <p>These colours are reserved across everything we produce &mdash; the platform, the reports
+        and this website &mdash; so an operator never has to re-learn them.</p></div></div>
+    <div class="grid4">
+      <div class="card sm reveal"><div><div class="status-row">
+        <span class="status-dot" style="background:#1F7A4D"></span><h3>Normal</h3></div>
+        <p>Within threshold</p></div></div><div class="card sm reveal"><div><div class="status-row">
+        <span class="status-dot" style="background:#B87400"></span><h3>Notice</h3></div>
+        <p>Approaching a trigger level</p></div></div><div class="card sm reveal"><div><div class="status-row">
+        <span class="status-dot" style="background:#C2410C"></span><h3>Alert</h3></div>
+        <p>Trigger level exceeded</p></div></div><div class="card sm reveal"><div><div class="status-row">
+        <span class="status-dot" style="background:#9B1C1C"></span><h3>Alarm</h3></div>
+        <p>Action level exceeded or instrument fault</p></div></div>
+    </div>
+  </div>
+</section>
+<section class="pad">
+  <div class="wrap">
+    <div class="cta reveal">
+      <p class="eb">Start here</p>
+      <h2>Send us the spec and we will tell you what it needs</h2>
+      <p>A drawing, a bill of quantities, or two lines about the problem &mdash; whichever you
+        have. We will come back with a scheme and a price.</p>
+      <a class="btn btn-ember btn-lg" href="/contact" style="margin-top:36px">Request a quote</a>
+    </div>
+  </div>
+</section></main>
+<footer class="site">
+  <div class="fgrid">
+    <div>
+      <div class="brand" style="color:#fff"><svg viewBox="0 0 200 200" width="40" height="40" role="img" aria-label="CORE">
+    
+    <path d="M 172.74 58.00 A 84 84 0 1 0 172.74 142.00" fill="none" stroke="url(#gS)" stroke-width="22"/>
+    <path d="M 145.60 69.24 A 55 55 0 1 0 145.60 130.76" fill="none" stroke="url(#gM)" stroke-width="20"/>
+    <path d="M 123.64 81.53 A 30 30 0 1 0 123.64 118.47" fill="none" stroke="url(#gE)" stroke-width="16"/>
+    <circle cx="100" cy="100" r="11" fill="url(#gC)"/>
+  </svg>
+        <span class="txt"><b>CORE</b><small style="color:#8FA3AD">Instrumentation &amp; Monitoring</small></span>
+      </div>
+      <p class="about">Geotechnical and structural instrumentation across North and South
+        America. Part of <span style="color:#C3D0D7">[PARENT COMPANY NAME]</span>, Ankara.</p>
+      <a class="btn btn-outline-dark" data-platform target="_blank" rel="noopener"
+        style="margin-top:24px">Platform login &rarr;</a>
+    </div>
+    <div><h4>Sectors</h4><ul>
+      <li><a href="/sector?s=dams">Dams &amp; Reservoirs</a></li>
+      <li><a href="/sector?s=tailings">Mining &amp; Tailings</a></li>
+      <li><a href="/sector?s=tunnels">Tunnels &amp; Underground</a></li>
+      <li><a href="/sector?s=excavations">Deep Excavations</a></li>
+      <li><a href="/sector?s=bridges">Bridges &amp; Structures</a></li>
+      <li><a href="/sector?s=slopes">Slopes &amp; Landslides</a></li></ul></div>
+    <div><h4>What we do</h4><ul>
+      <li><a href="/instruments">Instruments</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/platform">Monitoring platform</a></li>
+      <li><a href="/projects">Projects</a></li></ul></div>
+    <div><h4>Company</h4><ul>
+      <li><a href="/about">About CORE</a></li>
+      <li><a href="/about#team">Team</a></li>
+      <li><a href="/about#values">Core values</a></li>
+      <li><a href="/contact">Contact</a></li></ul></div>
+  </div>
+  <div class="fbottom">
+    <span>&copy; 2026 CORE Instrumentation &amp; Monitoring. All rights reserved.</span>
+    <span class="links"><a href="/privacy">Privacy</a><a href="/terms">Terms</a>
+      <a href="/accessibility">Accessibility</a></span>
+  </div>
+</footer>
+</body>
+</html>
