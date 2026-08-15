@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------------------------------------------------------- tokens */
+:root {
+  --core-petrol: #16242C;
+  --core-slate: #3A5563;
+  --core-slate-light: #6B8695;
+  --core-mantle: #8A4412;
+  --core-mantle-light: #C4762A;
+  --core-ember: #D25A10;
+  --core-ember-light: #F79A38;
+  --core-ember-text: #A84E0B;
+  --core-core: #FFDD80;
+  --core-ink: #241C15;
+  --core-paper: #F5F1EA;
+
+  /* data series — validated for colour-vision deficiency, see brand sheet */
+  --core-series-1: #0F5FA8;
+  --core-series-2: #D25A10;
+  --core-series-3: #0F8A5F;
+  --core-series-4: #6046B0;
+  --core-series-5: #B08400;
+  --core-series-6: #C4477E;
+
+  --core-status-normal: #1F7A4D;
+  --core-status-notice: #B87400;
+  --core-status-alert: #C2410C;
+  --core-status-alarm: #9B1C1C;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* room for the sticky header when jumping to an anchor */
+  scroll-padding-top: 88px;
+}
+
+body {
+  background: var(--core-paper);
+  color: var(--core-ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* tabular figures everywhere numbers matter */
+.tnum { font-variant-numeric: tabular-nums; }
+
+/* ------------------------------------------------------- scroll reveals */
+/* The Apple-ish part: content arrives from slightly below, slightly faded,
+   once. No parallax, no scroll-jacking, nothing that moves twice. */
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 18px, 0);
+  transition:
+    opacity 700ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 700ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* the hero cross-section separates as you scroll — driven by a CSS var the
+   Hero component updates from a scroll listener, so it degrades to static */
+.layer-shift {
+  transform: translate3d(0, calc(var(--shift, 0) * 1px), 0);
+  transition: transform 120ms linear;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal,
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .layer-shift { transform: none; }
+  .draw-arc { stroke-dasharray: none !important; stroke-dashoffset: 0 !important; animation: none !important; }
+}
+
+/* -------------------------------------------------- the mark drawing in */
+.draw-arc {
+  stroke-dasharray: var(--len);
+  stroke-dashoffset: var(--len);
+  animation: draw 1100ms cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+.draw-arc:nth-of-type(2) { animation-delay: 120ms; }
+.draw-arc:nth-of-type(3) { animation-delay: 240ms; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+
+.draw-core {
+  opacity: 0;
+  animation: fadeCore 500ms cubic-bezier(0.22, 0.61, 0.36, 1) 640ms forwards;
+}
+@keyframes fadeCore { to { opacity: 1; } }
+
+/* ------------------------------------------------------------ utilities */
+.rule {
+  background-image: linear-gradient(to right, var(--core-paper) 0%, #CFC3B0 12%, #CFC3B0 88%, var(--core-paper) 100%);
+  height: 1px;
+}
+
+::selection { background: var(--core-core); color: var(--core-ink); }
+
+:focus-visible {
+  outline: 2px solid var(--core-ember);
+  outline-offset: 3px;
+  border-radius: 2px;
+}

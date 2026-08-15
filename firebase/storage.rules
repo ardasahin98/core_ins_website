@@ -1,0 +1,29 @@
+rules_version = '2';
+
+// Storage layout
+//   /instruments/{slug}/datasheet.pdf     public read
+//   /instruments/{slug}/images/*.jpg      public read
+//   /projects/{slug}/images/*.jpg         public read
+//   /team/{slug}.jpg                      public read
+//   /inquiries/{inquiryId}/{filename}     write-only from the public form
+
+service firebase.storage {
+  match /b/{bucket}/o {
+    function isAdmin() {
+      return request.auth != null && request.auth.token.admin == true;
+    }
+
+    match /instruments/{allPaths=**} { allow read: if true; allow write: if isAdmin(); }
+    match /projects/{allPaths=**}    { allow read: if true; allow write: if isAdmin(); }
+    match /team/{allPaths=**}        { allow read: if true; allow write: if isAdmin(); }
+
+    // Spec / BOQ uploads attached to a quote request.
+    match /inquiries/{inquiryId}/{fileName} {
+      allow read: if isAdmin();
+      allow create: if request.resource.size < 25 * 1024 * 1024
+                    && request.resource.contentType.matches('application/pdf|image/.*|application/vnd.*|text/plain');
+    }
+
+    match /{allPaths=**} { allow read, write: if false; }
+  }
+}

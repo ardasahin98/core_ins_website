@@ -1,0 +1,175 @@
+[
+  {
+    "slug": "vw-piezometer", "name": "Vibrating Wire Piezometer", "categorySlug": "pore-pressure",
+    "summary": "Measures pore water pressure in boreholes, fills and embankments with long-term stability.",
+    "measures": "Pore water pressure and, by inference, groundwater level.",
+    "description": "PLACEHOLDER TEXT — replace with the parent company's product description. A vibrating wire piezometer measures the resonant frequency of a tensioned wire behind a diaphragm; because the reading is a frequency rather than a voltage, it is immune to cable length and resistance changes, which is what makes it usable on long-life dam and tailings installations.",
+    "applications": ["Embankment and concrete dams", "Tailings storage facilities", "Deep excavations", "Landfill and containment"],
+    "specs": [
+      { "label": "Standard ranges", "value": "0–350 kPa to 0–5 MPa", "imperial": "0–50 psi to 0–725 psi" },
+      { "label": "Accuracy", "value": "±0.1% FS" },
+      { "label": "Resolution", "value": "0.025% FS" },
+      { "label": "Operating temperature", "value": "−20 °C to +80 °C", "imperial": "−4 °F to +176 °F" },
+      { "label": "Cable", "value": "4-core shielded, direct burial" }
+    ],
+    "features": ["Frequency output — unaffected by cable length", "Integral thermistor for temperature correction", "Stainless steel body with replaceable filter"],
+    "rentable": false, "order": 1, "published": true
+  },
+  {
+    "slug": "in-place-inclinometer", "name": "In-Place Inclinometer", "categorySlug": "deformation",
+    "summary": "A permanent string of sensors in an inclinometer casing, giving a continuous displacement profile.",
+    "measures": "Subsurface horizontal displacement with depth.",
+    "description": "PLACEHOLDER TEXT — replace. A string of biaxial tilt sensors on a fixed gauge length, left permanently in the casing so the profile updates automatically instead of waiting for a probe survey.",
+    "applications": ["Slope early warning", "Diaphragm and secant walls", "Tailings dam raises", "Landslide monitoring"],
+    "specs": [
+      { "label": "Gauge lengths", "value": "0.5 m, 1 m, 2 m, 3 m", "imperial": "1.6 ft, 3.3 ft, 6.6 ft, 9.8 ft" },
+      { "label": "Range", "value": "±10°" },
+      { "label": "System accuracy", "value": "±2 mm per 25 m", "imperial": "±0.08 in per 82 ft" },
+      { "label": "Output", "value": "Vibrating wire or MEMS digital" }
+    ],
+    "features": ["Continuous automated profile", "Sections replaceable without pulling the string", "Compatible with standard 70 mm casing"],
+    "rentable": true, "order": 2, "published": true
+  },
+  {
+    "slug": "inclinometer-system", "name": "Probe Inclinometer System", "categorySlug": "deformation",
+    "summary": "Manual survey system for periodic displacement profiles — probe, cable reel and readout.",
+    "measures": "Subsurface horizontal displacement, surveyed on a schedule.",
+    "description": "PLACEHOLDER TEXT — replace.",
+    "applications": ["Baseline and periodic surveys", "Verification of automated systems", "Investigation and short campaigns"],
+    "specs": [
+      { "label": "Probe range", "value": "±30°" },
+      { "label": "Repeatability", "value": "±6 mm per 30 m", "imperial": "±0.24 in per 98 ft" },
+      { "label": "Cable lengths", "value": "up to 200 m", "imperial": "up to 656 ft" }
+    ],
+    "features": ["Bluetooth readout", "Field data checks before leaving site", "Rental fleet available"],
+    "rentable": true, "order": 3, "published": true
+  },
+  {
+    "slug": "extensometer", "name": "Borehole Extensometer", "categorySlug": "deformation",
+    "summary": "Multi-point rod or magnet extensometer for settlement and heave along a borehole.",
+    "measures": "Axial displacement between anchor points.",
+    "description": "PLACEHOLDER TEXT — replace.",
+    "applications": ["Tunnel crown settlement", "Foundation heave", "Fill settlement", "Rock mass deformation"],
+    "specs": [
+      { "label": "Anchors per hole", "value": "1 to 6" },
+      { "label": "Range", "value": "50 mm to 150 mm", "imperial": "2 in to 6 in" },
+      { "label": "Accuracy", "value": "±0.1% FS" }
+    ],
+    "features": ["Manual or vibrating wire readout", "Groutable and mechanical anchors", "Surface plate or downhole head"],
+    "rentable": false, "order": 4, "published": true
+  },
+  {
+    "slug": "tiltmeter", "name": "Tiltmeter / Beam Sensor", "categorySlug": "deformation",
+    "summary": "Surface-mounted sensors for rotation of structures, walls and buildings.",
+    "measures": "Rotation and differential settlement.",
+    "description": "PLACEHOLDER TEXT — replace.",
+    "applications": ["Third-party building protection", "Retaining wall rotation", "Bridge pier and abutment movement", "Heritage structures"],
+    "specs": [
+      { "label": "Range", "value": "±3° standard" },
+      { "label": "Resolution", "value": "1 arc second" },
+      { "label": "Mounting", "value": "Wall plate or beam, 1 m to 3 m", "imperial": "3.3 ft to 9.8 ft" }
+    ],
+    "features": ["Uniaxial and biaxial", "Chainable on one cable run", "Low-profile tamper-resistant housing"],
+    "rentable": true, "order": 5, "published": true
+  },
+  {
+    "slug": "load-cell", "name": "Vibrating Wire Load Cell", "categorySlug": "load-strain",
+    "summary": "Annular load cells for anchors, struts, rock bolts and tie-backs.",
+    "measures": "Axial load and its change over time.",
+    "description": "PLACEHOLDER TEXT — replace.",
+    "applications": ["Ground anchor proof and lock-off", "Strut and prop load", "Rock bolt monitoring", "Pile testing"],
+    "specs": [
+      { "label": "Capacities", "value": "200 kN to 5000 kN", "imperial": "45 kip to 1124 kip" },
+      { "label": "Accuracy", "value": "±0.5% FS" },
+      { "label": "Gauges", "value": "3, 4 or 6 vibrating wire elements" }
+    ],
+    "features": ["Averaging across gauges cancels eccentric loading", "Stainless steel construction", "Supplied with bearing plates"],
+    "rentable": true, "order": 6, "published": true
+  },
+  {
+    "slug": "strain-gauge", "name": "Vibrating Wire Strain Gauge", "categorySlug": "load-strain",
+    "summary": "Embedment and surface-mount gauges for concrete and steel.",
+    "measures": "Strain, and with it stress and load transfer.",
+    "description": "PLACEHOLDER TEXT — replace.",
+    "applications": ["Instrumented piles", "Bridge girders and decks", "Diaphragm wall panels", "Tunnel linings"],
+    "specs": [
+      { "label": "Range", "value": "3000 µε" },
+      { "label": "Resolution", "value": "1 µε" },
+      { "label": "Gauge lengths", "value": "50 mm to 250 mm", "imperial": "2 in to 10 in" }
+    ],
+    "features": ["Embedment, spot-weldable and arc-weldable types", "Integral thermistor", "Survives concrete pour"],
+    "rentable": false, "order": 7, "published": true
+  },
+  {
+    "slug": "automated-total-station", "name": "Automated Total Station (ATS)", "categorySlug": "geodetic",
+    "summary": "Robotic total station with prism networks for automated 3D movement monitoring.",
+    "measures": "Three-dimensional position of prism targets.",
+    "description": "PLACEHOLDER TEXT — replace.",
+    "applications": ["Tunnelling above ground settlement", "Dam crest and face movement", "Building and façade monitoring", "Slope surface displacement"],
+    "specs": [
+      { "label": "Angular accuracy", "value": "0.5\" to 1\"" },
+      { "label": "Distance accuracy", "value": "1 mm + 1.5 ppm", "imperial": "0.04 in + 1.5 ppm" },
+      { "label": "Range to prism", "value": "up to 3500 m", "imperial": "up to 11 483 ft" },
+      { "label": "Cycle", "value": "Programmable, typically hourly" }
+    ],
+    "features": ["Reference-prism atmospheric correction", "Weatherproof housing and UPS", "Feeds directly into the monitoring platform"],
+    "rentable": true, "order": 8, "published": true
+  },
+  {
+    "slug": "gnss-monitoring", "name": "GNSS Monitoring Station", "categorySlug": "geodetic",
+    "summary": "Permanent GNSS receivers for continuous millimetre-level displacement.",
+    "measures": "Absolute 3D position, continuously.",
+    "description": "PLACEHOLDER TEXT — replace.",
+    "applications": ["Open pit slopes", "Tailings dam crests", "Landslide early warning", "Remote sites without line of sight"],
+    "specs": [
+      { "label": "Horizontal precision", "value": "3 mm + 0.5 ppm", "imperial": "0.12 in + 0.5 ppm" },
+      { "label": "Vertical precision", "value": "6 mm + 0.5 ppm", "imperial": "0.24 in + 0.5 ppm" },
+      { "label": "Power", "value": "Solar with battery autonomy" }
+    ],
+    "features": ["No line of sight required", "Works through poor visibility and dust", "Cellular or satellite backhaul"],
+    "rentable": true, "order": 9, "published": true
+  },
+  {
+    "slug": "accelerometer", "name": "Vibration & Blast Monitor", "categorySlug": "vibration",
+    "summary": "Triaxial geophone and accelerometer units for blast and construction vibration.",
+    "measures": "Peak particle velocity, frequency and air overpressure.",
+    "description": "PLACEHOLDER TEXT — replace.",
+    "applications": ["Blast compliance monitoring", "Piling and demolition", "Rail and traffic vibration", "Structural response"],
+    "specs": [
+      { "label": "Velocity range", "value": "0.1 mm/s to 250 mm/s", "imperial": "0.004 in/s to 9.8 in/s" },
+      { "label": "Sample rate", "value": "1024 to 8192 samples/s" },
+      { "label": "Standards", "value": "Compliant recording to common blasting standards" }
+    ],
+    "features": ["Automatic event capture and notification", "On-board waveform storage", "Cellular reporting"],
+    "rentable": true, "order": 10, "published": true
+  },
+  {
+    "slug": "vw-datalogger", "name": "Field Datalogger & Gateway", "categorySlug": "dataloggers",
+    "summary": "Multi-channel logger with multiplexers, cellular telemetry and solar power.",
+    "measures": "Everything else — it is the collection point for the array.",
+    "description": "PLACEHOLDER TEXT — replace.",
+    "applications": ["Automated arrays of any size", "Remote sites on solar", "Alarm-driven monitoring"],
+    "specs": [
+      { "label": "Channels", "value": "8 native, expandable to 256 via multiplexers" },
+      { "label": "Sensor types", "value": "Vibrating wire, 4–20 mA, digital, thermistor" },
+      { "label": "Telemetry", "value": "4G LTE, Wi-Fi, satellite optional" },
+      { "label": "Power", "value": "12 V solar with battery autonomy" }
+    ],
+    "features": ["Scheduled and alarm-triggered readings", "Local storage through comms outages", "Pushes straight to the monitoring platform"],
+    "rentable": true, "order": 11, "published": true
+  },
+  {
+    "slug": "settlement-system", "name": "Hydrostatic Settlement System", "categorySlug": "deformation",
+    "summary": "Liquid-level cells for settlement profiles under embankments and structures.",
+    "measures": "Vertical settlement relative to a stable datum.",
+    "description": "PLACEHOLDER TEXT — replace.",
+    "applications": ["Embankment settlement", "Tank and silo foundations", "Building underpinning", "Rail formation"],
+    "specs": [
+      { "label": "Range", "value": "±250 mm to ±1000 mm", "imperial": "±10 in to ±39 in" },
+      { "label": "Accuracy", "value": "±0.1% FS" },
+      { "label": "Cells per line", "value": "up to 20" }
+    ],
+    "features": ["Single reference reservoir", "Vibrating wire or digital output", "Installs in confined spaces"],
+    "rentable": false, "order": 12, "published": true
+  }
+]

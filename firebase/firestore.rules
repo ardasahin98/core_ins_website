@@ -1,0 +1,51 @@
+rules_version = '2';
+
+// CORE Instrumentation & Monitoring — Firestore rules
+//
+// Public content is world-readable but only when published, so drafts stay
+// private. Nothing on the public site writes to these collections; the only
+// public write is a new inquiry, and that is create-only and rate-limited by
+// App Check. Editing happens in the Firebase console or the admin app, both
+// of which authenticate.
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isAdmin() {
+      return request.auth != null && request.auth.token.admin == true;
+    }
+
+    function publishedOnly() {
+      return resource.data.published == true;
+    }
+
+    // ---- public content ---------------------------------------------------
+    match /sectors/{doc}      { allow read: if publishedOnly() || isAdmin();
+                                allow write: if isAdmin(); }
+    match /projects/{doc}     { allow read: if publishedOnly() || isAdmin();
+                                allow write: if isAdmin(); }
+    match /instruments/{doc}  { allow read: if publishedOnly() || isAdmin();
+                                allow write: if isAdmin(); }
+    match /categories/{doc}   { allow read: if true;  allow write: if isAdmin(); }
+    match /services/{doc}     { allow read: if true;  allow write: if isAdmin(); }
+    match /team/{doc}         { allow read: if publishedOnly() || isAdmin();
+                                allow write: if isAdmin(); }
+
+    // ---- inbound enquiries ------------------------------------------------
+    // Anyone may create one; nobody but an admin may read them back.
+    match /inquiries/{doc} {
+      allow create: if request.resource.data.keys().hasAll(['name','email','message'])
+                    && request.resource.data.name is string
+                    && request.resource.data.name.size() > 1
+                    && request.resource.data.name.size() < 200
+                    && request.resource.data.email is string
+                    && request.resource.data.email.matches('^[^@]+@[^@]+\\.[^@]+$')
+                    && request.resource.data.message is string
+                    && request.resource.data.message.size() > 1
+                    && request.resource.data.message.size() < 5000;
+      allow read, update, delete: if isAdmin();
+    }
+
+    match /{document=**} { allow read, write: if false; }
+  }
+}
