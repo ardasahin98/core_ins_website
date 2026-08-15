@@ -1,3 +1,5 @@
+import type { CSSProperties } from 'react';
+
 /**
  * The CORE mark: three arcs and a core, flat caps, opening stepping inward.
  * Geometry is identical to the brand SVGs — do not adjust the radii or the
@@ -14,6 +16,11 @@ type Props = {
 };
 
 // arc path helpers, precomputed for r = 84 / 55 / 30 with gaps 30° / 34° / 38°
+/** CSS custom properties are not in the CSSProperties type; this is the
+ *  standard escape hatch for them. */
+const cssVar = (name: string, value: string | number): CSSProperties =>
+  ({ [name]: value }) as unknown as CSSProperties;
+
 const ARCS = [
   { d: 'M 172.74 58.00 A 84 84 0 1 0 172.74 142.00', w: 22, len: 440, tone: 'url(#coreSlate)' },
   { d: 'M 145.60 69.24 A 55 55 0 1 0 145.60 130.76', w: 20, len: 283, tone: 'url(#coreMantle)' },
@@ -65,7 +72,7 @@ export default function Logo({ size = 40, animate = false, tone = 'colour', clas
           strokeWidth={arc.w}
           strokeLinecap="butt"
           className={animate ? 'draw-arc' : undefined}
-          style={animate ? ({ ['--len' as string]: arc.len } as React.CSSProperties) : undefined}
+          style={animate ? cssVar('--len', arc.len) : undefined}
         />
       ))}
 

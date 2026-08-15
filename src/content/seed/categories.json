@@ -1,8 +1,0 @@
-[
-  { "slug": "pore-pressure", "name": "Pore Pressure & Groundwater", "summary": "Piezometers, water level meters and pressure transducers.", "order": 1 },
-  { "slug": "deformation", "name": "Deformation & Movement", "summary": "Inclinometers, extensometers, tiltmeters and settlement systems.", "order": 2 },
-  { "slug": "load-strain", "name": "Load, Strain & Stress", "summary": "Load cells, strain gauges, pressure cells and anchor monitoring.", "order": 3 },
-  { "slug": "geodetic", "name": "Geodetic & Optical", "summary": "Automated total stations, prisms and GNSS monitoring.", "order": 4 },
-  { "slug": "vibration", "name": "Vibration & Seismic", "summary": "Blast monitors, accelerometers and seismographs.", "order": 5 },
-  { "slug": "dataloggers", "name": "Dataloggers & Telemetry", "summary": "Field loggers, multiplexers, gateways and power systems.", "order": 6 }
-]

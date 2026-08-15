@@ -20,7 +20,7 @@ type Props = {
  * the first paint if JavaScript never runs.
  */
 export default function Reveal({ children, delay = 0, className = '', as = 'div' }: Props) {
-  const ref = useRef<HTMLElement | null>(null);
+  const ref = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -53,7 +53,7 @@ export default function Reveal({ children, delay = 0, className = '', as = 'div'
 
   return (
     <Tag
-      ref={ref as React.RefObject<HTMLDivElement>}
+      ref={ref}
       className={`reveal ${visible ? 'is-visible' : ''} ${className}`}
       style={{ transitionDelay: `${delay}ms` }}
     >

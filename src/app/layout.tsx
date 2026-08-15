@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import type { ReactNode } from 'react';
 import { Inter, Poppins, IBM_Plex_Mono } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
@@ -67,7 +68,7 @@ const ORG_JSON_LD = {
   areaServed: ['North America', 'South America'],
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable} ${plexMono.variable}`}>
       <body className="font-sans antialiased">

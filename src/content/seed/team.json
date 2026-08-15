@@ -1,6 +1,0 @@
-[
-  { "slug": "placeholder-1", "name": "PLACEHOLDER NAME", "role": "Regional Director", "bio": "Replace with a short bio — background, years in instrumentation, the projects they are known for.", "location": "Americas", "order": 1, "published": true },
-  { "slug": "placeholder-2", "name": "PLACEHOLDER NAME", "role": "Technical Manager", "bio": "Replace with a short bio.", "location": "Americas", "order": 2, "published": true },
-  { "slug": "placeholder-3", "name": "PLACEHOLDER NAME", "role": "Field Operations Lead", "bio": "Replace with a short bio.", "location": "Americas", "order": 3, "published": true },
-  { "slug": "placeholder-4", "name": "PLACEHOLDER NAME", "role": "Data & Platform Lead", "bio": "Replace with a short bio.", "location": "Americas", "order": 4, "published": true }
-]

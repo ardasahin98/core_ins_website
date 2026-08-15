@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, type CSSProperties } from 'react';
 import Logo from './Logo';
 
 /**
@@ -46,7 +46,7 @@ export default function Hero() {
     <section
       ref={sectionRef}
       className="relative overflow-hidden bg-petrol text-white"
-      style={{ ['--p' as string]: 0 } as React.CSSProperties}
+      style={{ '--p': 0 } as unknown as CSSProperties}
     >
       <div className="mx-auto grid max-w-content items-center gap-14 px-5 pb-24 pt-20 md:px-8 md:pb-32 md:pt-28 lg:grid-cols-[1.05fr_0.95fr]">
         <div>

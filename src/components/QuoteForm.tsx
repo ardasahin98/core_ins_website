@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, type FormEvent } from 'react';
 import { useSearchParams } from 'next/navigation';
 
 const PROJECT_TYPES = [
@@ -21,7 +21,7 @@ export default function QuoteForm() {
   const [state, setState] = useState<State>('idle');
   const [error, setError] = useState('');
 
-  async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setState('sending');
     setError('');

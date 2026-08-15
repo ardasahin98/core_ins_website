@@ -19,20 +19,26 @@ import teamSeed from '@/content/seed/team.json';
  * That means the site is never broken by a Firebase outage or a missing key,
  * and it runs today with placeholder content before anything is uploaded.
  *
+ * `publishedOnly` filters on the `published` flag. Collections that carry no
+ * such flag (categories, services) pass false and are read whole — which
+ * matches the security rules, where those two are world-readable.
+ *
  * Pages using these are statically generated and revalidated (see each page's
  * `revalidate`), so a busy site does not hammer Firestore on every request.
  */
-async function read<T extends { published?: boolean }>(
+async function read<T>(
   name: string,
   seed: unknown,
+  publishedOnly = true,
 ): Promise<T[]> {
   const fallback = seed as T[];
   if (!firebaseEnabled) return fallback;
   try {
     const store = db();
     if (!store) return fallback;
+    const ref = collection(store, name);
     const snap = await getDocs(
-      query(collection(store, name), where('published', '==', true)),
+      publishedOnly ? query(ref, where('published', '==', true)) : query(ref),
     );
     if (snap.empty) return fallback;
     return snap.docs.map((d) => d.data() as T);
@@ -42,7 +48,9 @@ async function read<T extends { published?: boolean }>(
   }
 }
 
-const bySortOrder = <T extends { order?: number; name?: string; title?: string }>(a: T, b: T) =>
+type Sortable = { order?: number; name?: string; title?: string };
+
+const bySortOrder = (a: Sortable, b: Sortable) =>
   (a.order ?? 999) - (b.order ?? 999) ||
   String(a.name ?? a.title ?? '').localeCompare(String(b.name ?? b.title ?? ''));
 
@@ -89,12 +97,13 @@ export async function getInstrumentsBySlugs(slugs: string[] = []): Promise<Instr
     .filter((i): i is Instrument => Boolean(i));
 }
 
+/** No `published` flag on these two — they are world-readable by the rules. */
 export async function getCategories(): Promise<Category[]> {
-  return (await read<Category>('categories', categoriesSeed)).sort(bySortOrder);
+  return (await read<Category>('categories', categoriesSeed, false)).sort(bySortOrder);
 }
 
 export async function getServices(): Promise<Service[]> {
-  return (await read<Service>('services', servicesSeed)).sort(bySortOrder);
+  return (await read<Service>('services', servicesSeed, false)).sort(bySortOrder);
 }
 
 export async function getTeam(): Promise<TeamMember[]> {
